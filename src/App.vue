@@ -1,10 +1,10 @@
 <template>
 <Header />
 <div class="container">
-  <Balance :total="total" />
+  <Balance :total="+total" />
   <IncomeExpenses :income="+income" :expenses="+expenses"/>
   <TransactionList :transactions="transactions" />
-  <AddTransaction />
+  <AddTransaction @transactionsSubmitted="handleTransactionsSubmitted"/>
 </div>
 </template>
 
@@ -51,4 +51,18 @@ const transactions = ref([
       }, 0)
       .toFixed(2);
     });
+
+    //Add Transaction
+    const handleTransactionsSubmitted = (transactionData) => {
+      transactions.value.push({
+        id: generateUniqueId(),
+        text: transactionData.text,
+        amount: transactionData.amount,
+      });
+    };
+
+    //Generate Unique Id
+    const generateUniqueId = () => {
+      return Math.floor(Math.random() * 1000000);
+    };
 </script>
