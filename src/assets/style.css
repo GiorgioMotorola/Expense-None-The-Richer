@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #ecebe5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,7 +90,7 @@ input[type="number"] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #88a4ff;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -121,6 +121,11 @@ input[type="number"] {
   position: relative;
   padding: 10px;
   margin: 10px 0;
+}
+
+.list li:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ced4e9;
 }
 
 .list li.plus {

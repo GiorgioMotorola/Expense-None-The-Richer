@@ -1,6 +1,6 @@
 # expense-tracker-vue
 
-This template should help get you started developing with Vue 3 in Vite.
+A web app with a fun name designed to keep you on top of your earnings and expenses.
 
 ## Recommended IDE Setup
 
